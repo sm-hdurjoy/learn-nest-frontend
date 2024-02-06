@@ -8,15 +8,13 @@ import { useFilter } from "../../context/FilterContext";
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
 
-  const [products, setProducts] = useState([]);
 
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get("q");
 
   useTitle("Explore eBooks Collection");
 
-  // const { productList } = useFilter();
-  // console.log(productList);
+  const { products, initialProductList } = useFilter();
 
   useEffect(() => {
     async function fetchProducts() {
@@ -26,7 +24,7 @@ export const ProductsList = () => {
         }`
       );
       const data = await response.json();
-      setProducts(data);
+      initialProductList(data)
     }
     fetchProducts();
   }, [searchTerm]);
