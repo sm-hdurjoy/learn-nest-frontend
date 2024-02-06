@@ -8,7 +8,7 @@ export const Header = () => {
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
 
-  const [searchSection, setSetsearchSection] = useState(false);
+  const [searchSection, setSearchSection] = useState(false);
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
 
@@ -36,7 +36,7 @@ export const Header = () => {
             ></span>
             <span
               className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"
-              onClick={() => setSetsearchSection(!searchSection)}
+              onClick={() => setSearchSection(!searchSection)}
             ></span>
             <Link to="/cart" className="text-gray-700 dark:text-white mr-5">
               <span className="text-2xl bi bi-cart-fill relative">
@@ -49,7 +49,7 @@ export const Header = () => {
           </div>
         </div>
       </nav>
-      {searchSection && <Search />}
+      {searchSection && <Search setSearchSection={setSearchSection} />}
     </header>
   );
 };
