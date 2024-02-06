@@ -27,7 +27,7 @@ export const ProductCard = ({ product }) => {
           alt={name}
         />
       </Link>
-      <div className="p-5">
+      <div className="p-5 ">
         <Link to={`/products/${id}`}>
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {name}
@@ -37,7 +37,7 @@ export const ProductCard = ({ product }) => {
           {overview}
         </p>
 
-        <Rating rating={rating}/>
+        <Rating rating={rating} />
 
         <p className="flex justify-between items-center">
           <span className="text-2xl dark:text-gray-200">
