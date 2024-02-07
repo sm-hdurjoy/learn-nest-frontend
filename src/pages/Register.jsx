@@ -1,8 +1,11 @@
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export const Register = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+    // const email = useRef();
+    // const password = useRef();
   async function handleRegister(event) {
     event.preventDefault();
 
@@ -12,15 +15,18 @@ export const Register = () => {
       password: event.target.password.value,
     };
 
-    const response = await fetch("http://localhost:8000/register", {
+    const requestOptions = {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { "content-Type": "application/json" },
       body: JSON.stringify(authDetail),
-    });
+    };
 
-    const data = await response.json()
-    data.accessToken ? navigate("/products"): toast.error(data)
-    // console.log(data);
+    const response = await fetch(
+      "http://localhost:8000/register",
+      requestOptions
+    );
+    const data = await response.json();
+    data.accessToken ? navigate("/products") : toast.error(data);
   }
 
   return (
