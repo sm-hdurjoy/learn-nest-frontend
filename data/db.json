@@ -238,5 +238,24 @@
     }
   ],
   "orders": [],
-  "users": []
+  "users": [
+    {
+      "email": "hazzazdurjoy@gmail.com",
+      "password": "$2a$10$0SSklEbGyV9nT0JCdqqaeOGjmkkn/..nANmFOM2UkZb4/cmQWbtMO",
+      "name": "Hazzaz Durjoy",
+      "id": 1
+    },
+    {
+      "email": "hazzaz@gmail.com",
+      "password": "$2a$10$0ENvzwi.R7mOK/peKz9WweYPiiA0ooy/bJ.QfAM3.QkTILxwjPWRO",
+      "name": "Hazzaz",
+      "id": 2
+    },
+    {
+      "email": "durjoy@gmail.com",
+      "password": "$2a$10$iXPoMIhygS8.T/ckp4sU6OITKHuFRomKZIni2oyfdT0V8DJueu6kG",
+      "name": "Durjoy",
+      "id": 3
+    }
+  ]
 }
