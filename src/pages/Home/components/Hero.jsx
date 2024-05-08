@@ -18,6 +18,7 @@ export const Hero = () => {
           Explore eBooks
         </Link>
       </div>
+
       <div className="visual my-5 lg:max-w-xl">
         <img
           className="rounded-lg max-h-full"

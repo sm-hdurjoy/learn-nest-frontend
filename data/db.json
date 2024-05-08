@@ -256,6 +256,12 @@
       "password": "$2a$10$iXPoMIhygS8.T/ckp4sU6OITKHuFRomKZIni2oyfdT0V8DJueu6kG",
       "name": "Durjoy",
       "id": 3
+    },
+    {
+      "email": "ayon@ayon.com",
+      "password": "$2a$10$SPA9ArVfqMlsjwUG5uTfVOLV8EM8/jyOJVOEManSE/Ce8F9dpxG/W",
+      "name": "ayon",
+      "id": 4
     }
   ]
 }

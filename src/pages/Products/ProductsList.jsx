@@ -8,7 +8,6 @@ import { useFilter } from "../../context/FilterContext";
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
 
-
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get("q");
 
@@ -24,7 +23,7 @@ export const ProductsList = () => {
         }`
       );
       const data = await response.json();
-      initialProductList(data)
+      initialProductList(data);
     }
     fetchProducts();
   }, [searchTerm]);
