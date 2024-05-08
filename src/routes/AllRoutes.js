@@ -5,6 +5,7 @@ import {
   ProductDetail,
   Login,
   Register,
+  CartPage,
 } from "../pages";
 
 export const AllRoutes = () => {
@@ -17,6 +18,8 @@ export const AllRoutes = () => {
 
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+
+        <Route path="cart" element={<CartPage />} />
       </Routes>
     </>
   );
