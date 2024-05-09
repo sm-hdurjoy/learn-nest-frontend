@@ -1,4 +1,6 @@
-const { createContext, useContext } = require("react")
+import { cartReducers } from "../reducers/cartReducers"
+
+const { createContext, useContext, useReducer } = require("react")
 
 const cartInitialState = {
     cartList: [],
@@ -8,6 +10,9 @@ const cartInitialState = {
 const CartContext = createContext(cartInitialState)
 
 export const CartProvider = ({children}) => {
+    const [state, dispatch] = useReducer(cartReducers, cartInitialState)
+
+    
 
     const value = {
         cartList: [],
