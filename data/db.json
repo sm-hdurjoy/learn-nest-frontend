@@ -256,6 +256,12 @@
       "password": "$2a$10$A7wwxIdU5xJL56Zgxieb/uWYcCYpLl7CuXehfnF0tn9zq028Q2KdO",
       "name": "Durjoy",
       "id": 3
+    },
+    {
+      "email": "anika@anika.com",
+      "password": "$2a$10$b7vL9edOg8UAZMUWAOq8Ped1UwOlp1CnopDLnD5.dnDIFiwU5cdge",
+      "name": "Anika",
+      "id": 4
     }
   ]
 }
