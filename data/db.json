@@ -237,7 +237,46 @@
       "best_seller": true
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "cartList": [
+        {
+          "id": 10001,
+          "name": "Basics To Advanced In React",
+          "overview": "Master React from fundamentals to advanced concepts in this comprehensive guide for aspiring developers.",
+          "long_description": "Dive into the immersive world of React with 'Basics To Advanced In React.' This comprehensive guide is crafted to cater to both beginners and seasoned developers, providing a meticulous exploration of React's fundamental principles and advanced capabilities. From setting up your development environment to mastering state management and routing, each chapter is designed to build a strong foundation and elevate your expertise. With hands-on examples and real-world applications, this book ensures that you not only grasp theoretical concepts but also gain practical insights into building dynamic and responsive user interfaces. Whether you're starting your journey in web development or seeking to enhance your skills, this book serves as your reliable companion. Join us on this learning adventure and unlock the full potential of React, emerging as a proficient developer ready to tackle modern web development challenges.",
+          "price": 29,
+          "poster": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10001.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 5,
+          "best_seller": true
+        },
+        {
+          "id": 10002,
+          "name": "Django Framework for Beginners",
+          "overview": "Unlock Django's power with this beginner-friendly guide to web development using the Django framework.",
+          "long_description": "Embark on your web development journey with 'Django Framework for Beginners.' This book serves as your gateway to the powerful and efficient Django framework, designed to simplify the complexities of building robust web applications. Ideal for those taking their first steps into the world of web development, this guide provides a hands-on and beginner-friendly approach to Django. From understanding the MVC architecture to creating dynamic web pages and handling user authentication, each chapter guides you through essential concepts with practical examples. As you progress, you'll gain proficiency in database integration, URL routing, and template rendering. Whether you're a programming novice or transitioning to Django from another framework, this book ensures a smooth learning curve, empowering you to create web applications with confidence and efficiency.",
+          "price": 19,
+          "poster": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10002.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 2,
+          "best_seller": false
+        }
+      ],
+      "amount_paid": 48,
+      "quantity": 2,
+      "user": {
+        "name": "Hakuna",
+        "email": "hakuna@hakuna.com",
+        "id": 1
+      },
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "hakuna@hakuna.com",
