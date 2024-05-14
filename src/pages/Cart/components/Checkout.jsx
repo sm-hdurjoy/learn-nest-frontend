@@ -112,7 +112,7 @@ export const Checkout = ({ setCheckout }) => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    className="inline-block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     Email:
                   </label>
