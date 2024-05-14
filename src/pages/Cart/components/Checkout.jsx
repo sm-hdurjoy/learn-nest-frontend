@@ -1,21 +1,27 @@
+// Library Imports
 import { useEffect, useState } from "react";
-import { useCart } from "../../../context";
 import { useNavigate } from "react-router-dom";
-import { createOrder, getUser } from "../../../services";
 import { toast } from "react-toastify";
 
+// Component Imports
+import { useCart } from "../../../context";
+import { createOrder, getUser } from "../../../services";
+
 export const Checkout = ({ setCheckout }) => {
-  const { total, cartList, clearCart } = useCart();
-  const [user, setUser] = useState({});
+  const { total, cartList, clearCart } = useCart(); // destructuring functions from CartContext
+  const [user, setUser] = useState({}); // user state variable to store user information
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // useNavigate hook to handle navigation
 
+  // useEffect hook to fetch user data from db.json
   useEffect(() => {
+    // async function to fetch user data from db.json
     async function fetchData() {
       try {
-        const data = await getUser();
-        setUser(data);
+        const data = await getUser(); // storing user information in data object
+        setUser(data); // setting user data after fetching
       } catch (error) {
+        // Showing toast message if error occurs while fetching user data
         toast.error(error.message, {
           closeButton: true,
           position: "bottom-center",
@@ -27,15 +33,18 @@ export const Checkout = ({ setCheckout }) => {
     fetchData();
   }, []);
 
+  // handleOrderSubmit function to handle order submission
   async function handleOrderSubmit(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevent default form submit functionality
 
     try {
-      const data = await createOrder(cartList, total, user);
-      clearCart();
-      navigate("/order-summary", { state: { data: data, status: true } });
+      const data = await createOrder(cartList, total, user); // creating order and storing the result in data object
+      clearCart(); // clearing cart when order is done
+      navigate("/order-summary", { state: { data: data, status: true } }); // navigating to order-summary page to see order details after confirmation
     } catch (error) {
+      // navigating to order-summary page with status false if error occurs while creating order
       navigate("/order-summary", { state: { status: false } });
+      // showing error message as toast while creating order
       toast.error(error.message, {
         closeButton: true,
         position: "bottom-center",

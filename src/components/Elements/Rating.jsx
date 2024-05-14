@@ -1,5 +1,6 @@
 export const Rating = ({ rating }) => {
-  let ratingArray = Array(5).fill(false);
+  let ratingArray = Array(5).fill(false); // rating array
+  // filling the array with the number of stars that are available
   for (let i = 0; i < rating; i++) {
     ratingArray[i] = true;
   }

@@ -1,11 +1,14 @@
+// Library Imports
 import { useState } from "react";
+
+// Component Imports
 import { CartCard } from "./CartCard";
 import { Checkout } from "./Checkout";
 import { useCart } from "../../../context";
 
 export const CartList = () => {
-  const { cartList, total } = useCart();
-  const [checkout, setCheckout] = useState(false);
+  const { cartList, total } = useCart(); // destructuring functions from CartContext
+  const [checkout, setCheckout] = useState(false); // checkout state variable to toggle checkout component visibility
 
   return (
     <>

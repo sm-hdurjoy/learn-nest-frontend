@@ -1,6 +1,8 @@
+// Library imports
 import { createContext, useContext, useReducer } from "react";
 import { filterReducer } from "../reducers";
 
+// initializing initial state
 const filterInitialState = {
   productList: [],
   onlyInStock: false,
@@ -9,12 +11,14 @@ const filterInitialState = {
   ratings: null,
 };
 
-const FilterContext = createContext(filterInitialState);
+const FilterContext = createContext(filterInitialState); // create context with filter initial state
 
 export const FilterProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(filterReducer, filterInitialState);
+  const [state, dispatch] = useReducer(filterReducer, filterInitialState); //// use reducer hook to manage state and dispatch for filter
 
+  // function to handle initial products without filtering
   function initialProductList(products) {
+    // dispatching action to update filter state with products
     dispatch({
       type: "PRODUCT_LIST",
       payload: {
@@ -23,18 +27,21 @@ export const FilterProvider = ({ children }) => {
     });
   }
 
+  // function to filter best seller products
   function bestSeller(products) {
     return state.bestSellerOnly
       ? products.filter((product) => product.best_seller === true)
       : products;
   }
 
+  // function to filter only in stock products
   function inStock(products) {
     return state.onlyInStock
       ? products.filter((product) => product.in_stock === true)
       : products;
   }
 
+  // function to sort products accprding to price
   function sort(products) {
     if (state.sortBy === "lowtohigh") {
       return products.sort((a, b) => Number(a.price) - Number(b.price));
@@ -45,6 +52,7 @@ export const FilterProvider = ({ children }) => {
     return products;
   }
 
+  // function to filter products according to rating
   function rating(products) {
     if (state.ratings === "4STARSABOVE") {
       return products.filter((product) => product.rating >= 4);
@@ -61,10 +69,12 @@ export const FilterProvider = ({ children }) => {
     return products;
   }
 
+  // function to filter products according to all filters
   const filteredProductList = rating(
     sort(inStock(bestSeller(state.productList)))
   );
 
+  // creating value object to import
   const value = {
     state,
     dispatch,
@@ -76,6 +86,7 @@ export const FilterProvider = ({ children }) => {
   );
 };
 
+// // useFilter hook to use FilterContext functions
 export const useFilter = () => {
   const context = useContext(FilterContext);
   return context;

@@ -1,9 +1,14 @@
+// Library Imports
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
+
+// Component Import
 import { useTitle } from "../hooks/useTitle";
 
+// Asset Imports
+import Logo from "../assets/logo.png";
+
 export const PageNotFound = () => {
-  useTitle("Page Not Found");
+  useTitle("Page Not Found"); // set title
   return (
     <main>
       <section className="flex flex-col justify-center px-2">

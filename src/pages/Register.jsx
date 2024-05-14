@@ -1,27 +1,32 @@
-// import { useRef } from "react";
+// Library Imports
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
+// Component Imports
 import { register } from "../services";
 import { useTitle } from "../hooks/useTitle";
 
 export const Register = () => {
-  useTitle("Register");
+  useTitle("Register"); // set title
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // useNavigate hook to handle navigation
 
+  // handleRegister function to handle register form submit event
   async function handleRegister(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevent default behaviour of form submit event
 
     try {
+      // get user details from register form
       const authDetail = {
         name: event.target.name.value,
         email: event.target.email.value,
         password: event.target.password.value,
       };
 
-      const data = await register(authDetail);
-      data.accessToken ? navigate("/products") : toast.error(data);
+      const data = await register(authDetail); // register user by calling register function
+      data.accessToken ? navigate("/products") : toast.error(data); // navigate to product if user token found otherwise show error toast
     } catch (error) {
+      // show error toast if any error found while registering user
       toast.error(error.message, {
         closeButton: true,
         position: "bottom-center",

@@ -1,17 +1,22 @@
+// Library imports
 import { useEffect, useState } from "react";
-import { ProductCard } from "../../../components";
-import { getFeaturedList } from "../../../services";
 import { toast } from "react-toastify";
 
-export const FeaturedProducts = () => {
-  const [products, setProducts] = useState([]);
+// Component Imports
+import { ProductCard } from "../../../components";
+import { getFeaturedList } from "../../../services";
 
+export const FeaturedProducts = () => {
+  const [products, setProducts] = useState([]); // state variable to store productlist items
+
+  // useEffect hook to fetch featured product list items from the API
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const data = await getFeaturedList();
-        setProducts(data);
+        const data = await getFeaturedList(); // fetch featured product list
+        setProducts(data); // store featured product list items in the products state variable
       } catch (error) {
+        // show toast error if there was an error fetching featured product list items
         toast.error(error.message, {
           closeButton: true,
           position: "bottom-center",

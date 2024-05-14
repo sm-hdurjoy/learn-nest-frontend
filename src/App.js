@@ -1,6 +1,9 @@
+// Library Imports
 import { AllRoutes } from "./routes/AllRoutes";
-import "./App.css";
 import { Footer, Header } from "./components";
+
+// Styles Imports
+import "./App.css";
 
 function App() {
   return (

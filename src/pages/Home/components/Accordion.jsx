@@ -1,3 +1,4 @@
+// Library Imports
 import { useState } from "react";
 
 export const Accordion = ({ faq }) => {

@@ -1,3 +1,4 @@
+// Component Imports
 import { Hero } from "./components/Hero";
 import { FeaturedProducts } from "./components/FeaturedProducts";
 import { Testimonials } from "./components/Testimonials";

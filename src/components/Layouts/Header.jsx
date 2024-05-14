@@ -1,21 +1,28 @@
+// Library Imports
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import { useEffect, useState } from "react";
+
+// Component Imports
 import { Search } from "../Sections/Search";
 import { DropdownLoggedOut, DropdownLoggedIn } from "../index";
 import { useCart } from "../../context";
 
+// Asset Imports
+import Logo from "../../assets/logo.png";
+
 export const Header = () => {
+  // darkMode state variable to set the theme color
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
 
-  const [searchSection, setSearchSection] = useState(false);
+  const [searchSection, setSearchSection] = useState(false); // state variable to set the search section visibility
 
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false); // state variable to set the dropdown visibility
 
-  const token = JSON.parse(sessionStorage.getItem("token"));
+  const token = JSON.parse(sessionStorage.getItem("token")); // getting user token from session storage
 
+  // useEffect hook to set the theme color on page load
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
 
@@ -25,8 +32,8 @@ export const Header = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
-  
-  const {cartList} = useCart()
+
+  const { cartList } = useCart(); // using cartList from CartContext to show how many items are in the header cart icon
 
   return (
     <header>

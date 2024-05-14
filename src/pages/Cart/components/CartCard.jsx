@@ -1,8 +1,11 @@
+// Library imports
 import { Link } from "react-router-dom";
+
+// Component imports
 import { useCart } from "../../../context";
 
 export const CartCard = ({ product }) => {
-  const { removeFromCart } = useCart();
+  const { removeFromCart } = useCart(); // destructuring functions from CartContext
   return (
     <div className="flex flex-wrap justify-between border-b dark:border-slate-700 max-w-4xl m-auto p-2 mb-5 ">
       <div className="flex">

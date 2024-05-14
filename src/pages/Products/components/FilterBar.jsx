@@ -1,3 +1,4 @@
+// Component Imports
 import { useFilter } from "../../../context";
 
 export const FilterBar = ({ setShow }) => {

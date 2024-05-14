@@ -1,18 +1,26 @@
+// Library Imports
 import { Link, useNavigate } from "react-router-dom";
-import { getUser, logout } from "../../services";
 import { useEffect, useState } from "react";
+
+// Component/Pages imports
+import { getUser, logout } from "../../services";
+
+// Other Imports
 import { toast } from "react-toastify";
 
 export const DropdownLoggedIn = ({ setDropdown }) => {
-  const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  const navigate = useNavigate(); // using useNavigate hook to handle navigation
+  const [user, setUser] = useState({}); // user state to display user information
 
+  // using useEffect hook to fetch user data on page load
   useEffect(() => {
+    // async function to fetch user data
     async function fetchData() {
       try {
-        const data = await getUser();
-        data.email ? setUser(data) : handleLogout();
+        const data = await getUser(); // fetch user data
+        data.email ? setUser(data) : handleLogout(); // set user if user data is available otherwise handle logout
       } catch (error) {
+        // showing toast message when error occurs while fetching user data
         toast.error(error.message, {
           closeButton: true,
           position: "bottom-center",
@@ -24,6 +32,7 @@ export const DropdownLoggedIn = ({ setDropdown }) => {
     fetchData();
   }, []);
 
+  // function to handle logout
   function handleLogout() {
     logout();
     setDropdown(false);

@@ -1,11 +1,16 @@
+// Library Imports
 import { Link } from "react-router-dom";
-import { Rating } from "./Rating";
-import { useCart } from "../../context";
 import { useEffect, useState } from "react";
 
+//Component Imports
+import { useCart } from "../../context";
+
+// Other Imports
+import { Rating } from "./Rating";
+
 export const ProductCard = ({ product }) => {
-  const { cartList, addToCart, removeFromCart } = useCart();
-  const [inCart, setInCart] = useState(false);
+  const { cartList, addToCart, removeFromCart } = useCart(); // destructuring functions from CartContext
+  const [inCart, setInCart] = useState(false); // inCart state variable to check whether cart is empty or not
   const {
     id,
     name,
@@ -17,6 +22,7 @@ export const ProductCard = ({ product }) => {
     best_seller,
   } = product;
 
+  // useEffect hook to check whether product is in cart or not on page load
   useEffect(() => {
     const productInCart = cartList.find((item) => item.id === product.id);
 

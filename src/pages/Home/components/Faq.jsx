@@ -1,3 +1,4 @@
+// Component Imports
 import { Accordion } from "./Accordion";
 
 export const Faq = () => {

@@ -1,31 +1,33 @@
+// Library Imports
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
+
+// Component Imports
 import { ProductCard } from "../../components";
 import { FilterBar } from "./components/FilterBar";
-import { useLocation } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
 import { useFilter } from "../../context/FilterContext";
 import { getProductList } from "../../services";
-import { toast } from "react-toastify";
 
 export const ProductsList = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false); // State variable to control dropdown visibility
 
-  const search = useLocation().search;
-  const searchTerm = new URLSearchParams(search).get("q");
+  const search = useLocation().search; // access query parameter of the current url
+  const searchTerm = new URLSearchParams(search).get("q"); // constructor to parse the query string from the URL
 
-  const [errorMessage, setErrorMessage] = useState("");
+  useTitle("Explore eBooks Collection"); // updating the title
 
-  useTitle("Explore eBooks Collection");
+  const { products, initialProductList } = useFilter(); // destructuring functions from filter context
 
-  const { products, initialProductList } = useFilter();
-
+  // useEffect hook to fetch product list
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const data = await getProductList(searchTerm);
-        initialProductList(data);
-        setErrorMessage("");
+        const data = await getProductList(searchTerm); // fetch product list
+        initialProductList(data); // store response in initial product list
       } catch (error) {
+        // if any error occurs, show using toast
         toast.error(error.message, {
           closeButton: true,
           position: "bottom-center",

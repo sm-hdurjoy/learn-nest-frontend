@@ -1,21 +1,23 @@
+// Reducer component import
+import { createContext, useContext, useReducer } from "react"
 import { cartReducers } from "../reducers/cartReducers";
 
-const { createContext, useContext, useReducer } = require("react");
-
+// initializing initial state
 const cartInitialState = {
   cartList: [],
   total: 0,
 };
 
-const CartContext = createContext(cartInitialState);
+const CartContext = createContext(cartInitialState); // create context with cart initial state
 
 export const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducers, cartInitialState);
+  const [state, dispatch] = useReducer(cartReducers, cartInitialState); // use reducer hook to manage state and dispatch for cart
 
+  // add to cart function to add products to cart
   function addToCart(product) {
-    const updatedList = state.cartList.concat(product);
-    const updatedTotal = state.total + product.price;
-
+    const updatedList = state.cartList.concat(product); // adding products to cartList
+    const updatedTotal = state.total + product.price; // updating total price of products in cart
+    // dispatching action to update cart state after adding products
     dispatch({
       type: "ADD_TO_CART",
       payload: {
@@ -25,10 +27,12 @@ export const CartProvider = ({ children }) => {
     });
   }
 
+  // remove from cart function to remove products from cart
   function removeFromCart(product) {
-    const updatedList = state.cartList.filter((item) => item.id !== product.id);
-    const updatedTotal = state.total - product.price;
+    const updatedList = state.cartList.filter((item) => item.id !== product.id); // filtering which product to remove
+    const updatedTotal = state.total - product.price; // adjusting product total price after removing a product
 
+    // dispatching action to update cart state after removing a products
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: {
@@ -38,7 +42,9 @@ export const CartProvider = ({ children }) => {
     });
   }
 
+  // clear cart function to remove all products from cart
   function clearCart() {
+    // dispatching action to update cart state after removing all products from cart
     dispatch({
       type: "CLEAR_CART",
       payload: {
@@ -48,6 +54,7 @@ export const CartProvider = ({ children }) => {
     });
   }
 
+  // creating value object to export
   const value = {
     cartList: state.cartList,
     total: state.total,
@@ -59,6 +66,7 @@ export const CartProvider = ({ children }) => {
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
+// useCart hook to use CartContext functions
 export const useCart = () => {
   const context = useContext(CartContext);
   return context;

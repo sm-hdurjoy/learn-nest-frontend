@@ -1,27 +1,33 @@
+// Library Imports
 import { useEffect, useState } from "react";
-import { Rating } from "../components";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+
+// Component Imports
+import { Rating } from "../components";
 import { useTitle } from "../hooks/useTitle";
 import { useCart } from "../context";
 import { getProduct } from "../services";
-import { toast } from "react-toastify";
 
 export const ProductDetail = () => {
-  const { cartList, addToCart, removeFromCart } = useCart();
-  const [inCart, setInCart] = useState(false);
+  const { cartList, addToCart, removeFromCart } = useCart(); // destructuring functions from cart context
+  const [inCart, setInCart] = useState(false); // inCart variable to see if the product is in cart list
 
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState({}); // product variable to store product details
 
   const { id } = useParams();
 
-  useTitle(product.name);
+  useTitle(product.name); // set title
 
+  // useEffect hook to fetch product details from API and set it to product variable
   useEffect(() => {
+    // async function to fetch product details from API
     async function fetchProducts() {
       try {
-        const data = await getProduct(id);
-        setProduct(data);
+        const data = await getProduct(id); // storing product details in data variable after api call
+        setProduct(data); // storing response in product state variable
       } catch (error) {
+        // show toast if error occurs while fetching product details
         toast.error(error.message, {
           closeButton: true,
           position: "top-right",
@@ -33,8 +39,9 @@ export const ProductDetail = () => {
     fetchProducts();
   }, []);
 
+  // useEffect hook to check if the product is in cart list and set inCart state variable accordingly
   useEffect(() => {
-    const productInCart = cartList.find((item) => item.id === product.id);
+    const productInCart = cartList.find((item) => item.id === product.id); // checking if product is in cart list
 
     if (productInCart) {
       setInCart(true);

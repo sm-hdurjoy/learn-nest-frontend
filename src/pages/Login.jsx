@@ -1,27 +1,35 @@
+// Library Imports
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
+// Component Imports
 import { login } from "../services";
 import { useTitle } from "../hooks/useTitle";
 
 export const Login = () => {
-  useTitle("Login");
-  const navigate = useNavigate();
+  useTitle("Login"); // set title
+  const navigate = useNavigate(); // useNavigate hook to handle navigation
   const email = useRef();
   const password = useRef();
 
+  // handleLogin function to handle log in form submit event
   async function handleLogin(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevent default form submit event
 
     try {
+      // create authDetail object to store email and password
       const authDetail = {
         email: email.current.value,
         password: password.current.value,
       };
 
+      // storing log in data in data variable by calling login function with auth details
       const data = await login(authDetail);
+      // if user logged in navigate to product page else toast log in error
       data.accessToken ? navigate("/products") : toast.error(data);
     } catch (error) {
+      // if error toast error message
       toast.error(error.message, {
         closeButton: true,
         position: "bottom-center",

@@ -1,14 +1,16 @@
+// Library Imports
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Search = ({ setSearchSection }) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // using useNavigate hook to handle navigation
   const searchRef = useRef();
 
+  // Function to handle search form submission
   const handleSearch = (event) => {
-    event.preventDefault();
-    setSearchSection(false);
-    navigate(`/products?q=${searchRef.current.value}`);
+    event.preventDefault(); // prevent default event of form submission
+    setSearchSection(false); // set search section visibility
+    navigate(`/products?q=${searchRef.current.value}`); // navigate to products page with searched products
   };
 
   return (
