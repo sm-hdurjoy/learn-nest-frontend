@@ -7,7 +7,7 @@ import { Checkout } from "./Checkout";
 import { useCart } from "../../../context";
 
 export const CartList = () => {
-  const { cartList, total } = useCart(); // destructuring functions from CartContext
+  const { cartList, total } = useCart(); // destructuring functions from CartContext to use
   const [checkout, setCheckout] = useState(false); // checkout state variable to toggle checkout component visibility
 
   return (
