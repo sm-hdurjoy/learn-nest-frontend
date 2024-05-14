@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
 import { useFilter } from "../../context/FilterContext";
 import { getProductList } from "../../services";
+import { toast } from "react-toastify";
 
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
@@ -12,14 +13,26 @@ export const ProductsList = () => {
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get("q");
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   useTitle("Explore eBooks Collection");
 
   const { products, initialProductList } = useFilter();
 
   useEffect(() => {
     async function fetchProducts() {
-      const data = await getProductList(searchTerm);
-      initialProductList(data);
+      try {
+        const data = await getProductList(searchTerm);
+        initialProductList(data);
+        setErrorMessage("");
+      } catch (error) {
+        toast.error(error.message, {
+          closeButton: true,
+          position: "bottom-center",
+          autoClose: 5000,
+          closeOnClick: true,
+        });
+      }
     }
     fetchProducts();
   }, [searchTerm]);
