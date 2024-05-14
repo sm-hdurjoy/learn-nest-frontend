@@ -25,7 +25,7 @@ export async function getUser() {
   // checking if the response from backend was successful
   if (!response.ok) {
     // throwing an error if the response was unsuccessful
-    throw { message: response.statusText, status: response.status };
+    throw { message: response.statusText, status: response.status }; //eslint-disable-line
   }
   const data = await response.json(); // storing response in data variable
   return data;
@@ -52,7 +52,7 @@ export async function getUserOrders() {
   // checking if the response from backend was successful
   if (!response.ok) {
     // throwing an error if the response was unsuccessful
-    throw { message: response.statusText, status: response.status };
+    throw { message: response.statusText, status: response.status }; //eslint-disable-line
   }
   const data = await response.json(); // storing response in data variable
   return data;
@@ -92,7 +92,7 @@ export async function createOrder(cartList, total, user) {
   // checking if the response from backend was successful
   if (!response.ok) {
     // throwing an error if the response was unsuccessful
-    throw { message: response.statusText, status: response.status };
+    throw { message: response.statusText, status: response.status }; //eslint-disable-line
   }
   const data = await response.json();
   return data;

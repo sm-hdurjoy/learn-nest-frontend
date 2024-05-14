@@ -37,7 +37,7 @@ export const ProductDetail = () => {
       }
     }
     fetchProducts();
-  }, []);
+  }, []); //eslint-disable-line
 
   // useEffect hook to check if the product is in cart list and set inCart state variable accordingly
   useEffect(() => {

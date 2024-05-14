@@ -14,7 +14,7 @@ export async function login(authDetail) {
   );
   // if the response is not ok, throw an error
   if (!response.ok) {
-    throw { message: response.statusText, status: response.status };
+    throw { message: response.statusText, status: response.status }; //eslint-disable-line
   }
   const data = await response.json(); // store response data
 
@@ -43,7 +43,7 @@ export async function register(authDetail) {
   );
   // if the response is not ok, throw an error
   if (!response.ok) {
-    throw { message: response.statusText, status: response.status };
+    throw { message: response.statusText, status: response.status }; //eslint-disable-line
   }
   const data = await response.json();
 

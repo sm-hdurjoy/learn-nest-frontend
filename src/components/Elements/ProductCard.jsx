@@ -16,7 +16,6 @@ export const ProductCard = ({ product }) => {
     name,
     overview,
     poster,
-    image_local,
     price,
     rating,
     best_seller,
@@ -43,7 +42,7 @@ export const ProductCard = ({ product }) => {
         )}
         <img
           className="rounded-t-lg w-full h-64"
-          src={image_local}
+          src={poster}
           alt={name}
         />
       </Link>
