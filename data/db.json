@@ -339,6 +339,95 @@
         "id": 1
       },
       "id": 2
+    },
+    {
+      "cartList": [
+        {
+          "id": 10005,
+          "name": "Build a Blockchain from Scratch in Go",
+          "overview": "Unlock the secrets of blockchain creation with 'Build a Blockchain from Scratch in Go.' Dive into the fundamentals and craft your own blockchain network from the ground up.",
+          "long_description": "Dive into the fascinating world of blockchain technology with 'Build a Blockchain from Scratch in Go.' This comprehensive guide takes you on a step-by-step journey, unraveling the complexities of blockchain development using the Go programming language. From understanding the foundational concepts to hands-on implementation, this book empowers both beginners and experienced developers to grasp the intricacies of creating a fully functional blockchain. Explore the core principles of decentralized ledgers, consensus algorithms, and smart contracts, gaining practical insights through real-world examples. Whether you're a curious enthusiast or a developer eager to delve into blockchain development, this book equips you with the knowledge and skills to embark on your journey of building a blockchain from the ground up in Go.",
+          "price": 19,
+          "poster": "https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10005.avif",
+          "rating": 3,
+          "in_stock": true,
+          "size": 3,
+          "best_seller": false
+        },
+        {
+          "id": 10006,
+          "name": "Frontend Fastlane Plan With Projects",
+          "overview": "Dive into frontend development with our Fastlane Plan—curated projects to elevate skills and unleash creativity, crafting captivating user interfaces.",
+          "long_description": "Immerse yourself in the dynamic realm of frontend development with our Fastlane Plan. This meticulously curated program introduces you to real-world projects, meticulously designed to elevate your skills. Unleash your creativity and craft visually stunning user interfaces that not only captivate but also engage users on a profound level.",
+          "price": 99,
+          "poster": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10006.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 10,
+          "best_seller": false
+        }
+      ],
+      "amount_paid": 118,
+      "quantity": 2,
+      "user": {
+        "name": "Hakuna",
+        "email": "hakuna@hakuna.com",
+        "id": 1
+      },
+      "id": 3
+    },
+    {
+      "cartList": [
+        {
+          "id": 10011,
+          "name": "Web Development Foundation",
+          "overview": "Embark on a transformative journey to build a solid foundation in web development essentials with this comprehensive guide. Ideal for learners and enthusiasts seeking to master the intricacies of modern web development.",
+          "long_description": "Dive into the core principles of web development with 'Web Development Foundation.' This book serves as your indispensable companion on the journey to mastering the fundamental concepts that underpin modern web applications. From HTML and CSS to client-side scripting and server-side technologies, each chapter provides a hands-on approach, guiding you through practical exercises and real-world examples. Whether you're a beginner aiming to grasp the basics or an aspiring developer looking to solidify your understanding, this book offers a structured and engaging learning experience. Explore the intricacies of web development, gain practical skills, and set the stage for your future success in the dynamic world of building for the web.",
+          "price": 29,
+          "poster": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10011.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 3,
+          "best_seller": true
+        },
+        {
+          "id": 10012,
+          "name": "Mastering Git and GitHub - A Practical Guide",
+          "overview": "Master Git and GitHub with this practical guide for efficient version control and collaboration.",
+          "long_description": "Dive deep into the world of version control with 'Mastering Git and GitHub - A Practical Guide.' This comprehensive book equips you with the skills needed to harness the power of Git for efficient tracking, collaboration, and management of your software projects. From understanding the basics of Git commands to leveraging the collaborative features of GitHub, each chapter provides hands-on exercises and real-world examples. Whether you're a solo developer or part of a team, this book guides you through best practices, workflows, and advanced techniques to streamline your development process. Uncover the secrets of branching, merging, resolving conflicts, and more, empowering you to become a proficient Git user and a valuable contributor to collaborative projects. Elevate your version control skills with this indispensable resource.",
+          "price": 9,
+          "poster": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10012.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 1,
+          "best_seller": false
+        },
+        {
+          "id": 10010,
+          "name": "Mastering Software Technique",
+          "overview": "Master software techniques with this comprehensive guide to enhance your programming skills and craftsmanship.",
+          "long_description": "Embark on a transformative journey into the world of software development with 'Mastering Software Technique.' This book is designed for aspiring and seasoned developers alike, offering a deep dive into the art and science of crafting high-quality, efficient, and maintainable software. Explore a spectrum of advanced techniques, coding practices, and design principles that elevate your programming skills. From code organization to performance optimization, this guide covers it all, providing practical insights and real-world examples. Whether you're a novice looking to build a strong foundation or an experienced developer aiming to refine your craft, 'Mastering Software Technique' equips you with the knowledge and tools to write software that stands the test of time.",
+          "price": 19,
+          "poster": "https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10010.avif",
+          "rating": 4,
+          "in_stock": true,
+          "size": 1,
+          "best_seller": false
+        }
+      ],
+      "amount_paid": 57,
+      "quantity": 3,
+      "user": {
+        "name": "Hazzaz",
+        "email": "hazzaz@hazzaz.com",
+        "id": 2
+      },
+      "id": 4
     }
   ],
   "users": [
