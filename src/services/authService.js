@@ -12,7 +12,7 @@ export async function login(authDetail) {
     `${process.env.REACT_APP_HOST}/login`,
     requestOptions
   );
-  // if the response is not ok, throw an error
+  // if the response is not ok, throw an error object
   if (!response.ok) {
     throw { message: response.statusText, status: response.status }; //eslint-disable-line
   }
