@@ -40,10 +40,9 @@ This web application offers a platform for users to browse and purchase online c
    ```bash
    npm install
 
-
 ### Running the Application
 
-1.Start the JSON Server with authentication:
+1. Start the JSON Server with authentication:
    ```bash
    json-server --watch data/db.json -m ./node_modules/json-server-auth -r data/routes.json --port 8000
 
@@ -51,4 +50,6 @@ This web application offers a platform for users to browse and purchase online c
    ```bash
    npm run start
 
-3. Open your browser and navigate to http://localhost:3000
+3. Open your browser and navigate to `http://localhost:3000`
+
+### Project Structure
