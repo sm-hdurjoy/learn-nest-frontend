@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 // Component Imports
-import { login } from "../services";
 import { useTitle } from "../hooks/useTitle";
+import { login } from "../services";
 
 export const Login = () => {
   useTitle("Login"); // set title
