@@ -1,24 +1,33 @@
-## Available Scripts
+# Learn Nest Frontend
 
-In the project directory, you can run:
+This web application offers a platform for users to browse and purchase online courses, similar to a typical e-commerce website. Users can log in, register, or use guest login to explore courses, add them to their cart, and check out. The application includes a user dashboard to view orders and a cart to manage selected items.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User authentication using JWT (Login, Guest Login, Register)
+- Product listing and detailed views for online courses
+- Add to cart and checkout functionality
+- User dashboard to view ordered courses
+- Responsive design using Tailwind CSS
+- Context API for state management
 
-The page will reload when you make changes.
+## Technologies Used
 
-### `npm test`
+- React
+- Tailwind CSS
+- JSON Server
+- JWT Authentication
+- Context API
+- Netlify/Render for deployment
 
-Launches the test runner in the interactive watch mode.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.
+- Node.js and npm installed on your local machine
 
-The build is minified and the filenames include the hashes.
+### Installation
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sm-hdurjoy/learn-nest-frontend.git
