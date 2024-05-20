@@ -43,8 +43,17 @@ This web application offers a platform for users to browse and purchase online c
    ```
 
 3. Install the dependencies:
+
    ```bash
    npm install
+   ```
+
+4. Set up environtment variables:
+   Create a new file named `.env` in the root of your project and add the following content:
+   ```bash
+   REACT_APP_HOST: http://localhost:8000
+   REACT_APP_GUEST_LOGIN: Your Email
+   REACT_APP_GUEST_PASSWORD: Your Password
    ```
 
 ### Running the Application
