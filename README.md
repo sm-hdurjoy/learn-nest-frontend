@@ -92,3 +92,14 @@ This web application offers a platform for users to browse and purchase online c
   - `routes`: Application routing
   - `services`: Services for API calls
 - `data`: JSON Server data files
+
+### Deployment
+
+The application is deployed using Netlify and Render. Follow these steps to deploy your own version:
+
+1. Create an account on Netlify/Render.
+2. Connect your GitHub repository to the deployment platform.
+3. Configure the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `build`
+4. Deploy the site.
