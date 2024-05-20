@@ -67,31 +67,31 @@ This web application offers a platform for users to browse and purchase online c
 
 ### Project Structure
 
-- `public`: Public assets
-- `src`: Contains the source code
-  - `assets`: Static assets like images and fonts
-  - `components`: Reusable components
-    - `Elements`: Basic UI elements
-    - `Layouts`: Layout components
-    - `Others`: Miscellaneous components
-    - `Sections`: Section-specific components
-  - `context`: Context API for state management
-  - `hooks`: Custom React hooks
-  - `pages`: Different pages of the application
+- `public` : Public assets
+- `src` : Contains the source code
+  - `assets` : Static assets like images and fonts
+  - `components` : Reusable components
+    - `Elements` : Basic UI elements
+    - `Layouts` : Layout components
+    - `Others` : Miscellaneous components
+    - `Sections` : Section-specific components
+  - `context` : Context API for state management
+  - `hooks` : Custom React hooks
+  - `pages` : Different pages of the application
     - `Cart`
-      - `Components`: Components specific to the Cart page
+      - `Components` : Components specific to the Cart page
     - `Dashboard`
-      - `Components`: Components specific to the Dashboard page
+      - `Components` : Components specific to the Dashboard page
     - `Home`
-      - `Components`: Components specific to the Home page
+      - `Components` : Components specific to the Home page
     - `Order`
-      - `Components`: Components specific to the Order page
+      - `Components` : Components specific to the Order page
     - `Products`
-      - `Components`: Components specific to the Products page
-  - `reducers`: Reducers for state management
-  - `routes`: Application routing
-  - `services`: Services for API calls
-- `data`: JSON Server data files
+      - `Components` : Components specific to the Products page
+  - `reducers` : Reducers for state management
+  - `routes` : Application routing
+  - `services` : Services for API calls
+- `data` : JSON Server data files
 
 ### Deployment
 
