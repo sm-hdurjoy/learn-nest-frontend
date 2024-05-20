@@ -275,6 +275,57 @@
         "id": 1
       },
       "id": 1
+    },
+    {
+      "cartList": [
+        {
+          "id": 10009,
+          "name": "Python Deep Dive With Projects",
+          "overview": "Dive into Python's depths, mastering key concepts and applying skills with 'Python Deep Dive.'",
+          "long_description": "Embark on a comprehensive journey through the intricacies of Python programming with 'Python Deep Dive With Projects.' This book is crafted for both beginners seeking a solid foundation and experienced developers aiming to refine their Python skills. Delve into the language's core concepts, from basic syntax to advanced topics, and reinforce your learning through hands-on projects designed to challenge and deepen your understanding. Whether you're aspiring to build web applications, automate tasks, or dive into data science, this book provides the tools and knowledge you need. Gain practical insights, tackle real-world projects, and emerge with a profound mastery of Python's versatility and power.",
+          "price": 29,
+          "poster": "https://images.unsplash.com/photo-1624953587687-daf255b6b80a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10009.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 3,
+          "best_seller": false
+        },
+        {
+          "id": 10010,
+          "name": "Mastering Software Technique",
+          "overview": "Master software techniques with this comprehensive guide to enhance your programming skills and craftsmanship.",
+          "long_description": "Embark on a transformative journey into the world of software development with 'Mastering Software Technique.' This book is designed for aspiring and seasoned developers alike, offering a deep dive into the art and science of crafting high-quality, efficient, and maintainable software. Explore a spectrum of advanced techniques, coding practices, and design principles that elevate your programming skills. From code organization to performance optimization, this guide covers it all, providing practical insights and real-world examples. Whether you're a novice looking to build a strong foundation or an experienced developer aiming to refine your craft, 'Mastering Software Technique' equips you with the knowledge and tools to write software that stands the test of time.",
+          "price": 19,
+          "poster": "https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10010.avif",
+          "rating": 4,
+          "in_stock": true,
+          "size": 1,
+          "best_seller": false
+        },
+        {
+          "id": 10011,
+          "name": "Web Development Foundation",
+          "overview": "Embark on a transformative journey to build a solid foundation in web development essentials with this comprehensive guide. Ideal for learners and enthusiasts seeking to master the intricacies of modern web development.",
+          "long_description": "Dive into the core principles of web development with 'Web Development Foundation.' This book serves as your indispensable companion on the journey to mastering the fundamental concepts that underpin modern web applications. From HTML and CSS to client-side scripting and server-side technologies, each chapter provides a hands-on approach, guiding you through practical exercises and real-world examples. Whether you're a beginner aiming to grasp the basics or an aspiring developer looking to solidify your understanding, this book offers a structured and engaging learning experience. Explore the intricacies of web development, gain practical skills, and set the stage for your future success in the dynamic world of building for the web.",
+          "price": 29,
+          "poster": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/assets/images/10011.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 3,
+          "best_seller": true
+        }
+      ],
+      "amount_paid": 77,
+      "quantity": 3,
+      "user": {
+        "name": "Hakuna",
+        "email": "hakuna@example.com",
+        "id": 1
+      },
+      "id": 2
     }
   ],
   "users": [

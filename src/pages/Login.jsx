@@ -39,6 +39,31 @@ export const Login = () => {
     }
   }
 
+  async function handleLoginGuest() {
+    email.current.value = "hakuna@example.com";
+    password.current.value = "hakunahakuna";
+
+    try {
+      // create authDetail object to store email and password
+      const authDetail = {
+        email: email.current.value,
+        password: password.current.value,
+      };
+      // initiating login as guest with a valid email and password
+      const data = await login(authDetail);
+      // if user logged in navigate to product page else toast log in error
+      data.accessToken ? navigate("/products") : toast.error(data);
+    } catch (error) {
+      // if error toast error message
+      toast.error(error.message, {
+        closeButton: true,
+        position: "bottom-center",
+        autoClose: 5000,
+        closeOnClick: true,
+      });
+    }
+  }
+
   return (
     <main>
       <section>
@@ -86,7 +111,12 @@ export const Login = () => {
           Log In
         </button>
       </form>
-      {/* <button className="mt-3 cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login As Guest</button> */}
+      <button
+        onClick={handleLoginGuest}
+        className="mt-3 cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Login As Guest
+      </button>
     </main>
   );
 };
