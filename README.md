@@ -29,27 +29,66 @@ This web application offers a platform for users to browse and purchase online c
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/sm-hdurjoy/learn-nest-frontend.git
 
+   ```
+
 2. Navigate to the project directory:
+
    ```bash
    cd learn-nest-frontend
+
+   ```
 
 3. Install the dependencies:
    ```bash
    npm install
+   ```
 
 ### Running the Application
 
 1. Start the JSON Server with authentication:
+
    ```bash
    json-server --watch data/db.json -m ./node_modules/json-server-auth -r data/routes.json --port 8000
 
+   ```
+
 2. Start the React application:
+
    ```bash
    npm run start
+
+   ```
 
 3. Open your browser and navigate to `http://localhost:3000`
 
 ### Project Structure
+
+- `public`: Public assets
+- `src`: Contains the source code
+  - `assets`: Static assets like images and fonts
+  - `components`: Reusable components
+    - `Elements`: Basic UI elements
+    - `Layouts`: Layout components
+    - `Others`: Miscellaneous components
+    - `Sections`: Section-specific components
+  - `context`: Context API for state management
+  - `hooks`: Custom React hooks
+  - `pages`: Different pages of the application
+    - `Cart`
+      - `Components`: Components specific to the Cart page
+    - `Dashboard`
+      - `Components`: Components specific to the Dashboard page
+    - `Home`
+      - `Components`: Components specific to the Home page
+    - `Order`
+      - `Components`: Components specific to the Order page
+    - `Products`
+      - `Components`: Components specific to the Products page
+  - `reducers`: Reducers for state management
+  - `routes`: Application routing
+  - `services`: Services for API calls
+- `data`: JSON Server data files
